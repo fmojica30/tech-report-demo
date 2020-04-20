@@ -10,13 +10,12 @@ import {
   CardSubtitle,
   Button,
 } from "reactstrap";
+import { connect } from "react-redux";
 
 // Image imports
 import Shoes from "../../Static/Images/Shoes.jpg";
 import Wallet from "../../Static/Images/Wallet.jpg";
 import DSLR from "../../Static/Images/DSLR.jpg";
-
-
 
 const Items = (props) => {
   return (
@@ -36,22 +35,17 @@ const Items = (props) => {
               <CardBody>
                 <CardTitle>Camera</CardTitle>
                 <CardSubtitle>High Quality DSLR</CardSubtitle>
-                <Button style={{margin: "15px"}}>Add to cart</Button>
+                <Button style={{ margin: "15px" }} onClick={props.addCamera}>Add to cart</Button>
               </CardBody>
             </Card>
           </Col>
           <Col>
             <Card>
-              <CardImg
-                top
-                width="100%"
-                src={Shoes}
-                alt="Card image cap"
-              />
+              <CardImg top width="100%" src={Shoes} alt="Card image cap" />
               <CardBody>
                 <CardTitle>White Shoes</CardTitle>
                 <CardSubtitle>Comfortable Shoes</CardSubtitle>
-                <Button style={{margin: "15px"}}>Add to Cart</Button>
+                <Button style={{ margin: "15px" }} onClick={props.addShoes}>Add to Cart</Button>
               </CardBody>
             </Card>
           </Col>
@@ -67,7 +61,7 @@ const Items = (props) => {
               <CardBody>
                 <CardTitle>Wallet</CardTitle>
                 <CardSubtitle>High quality leather wallet</CardSubtitle>
-                <Button style={{margin: "15px"}}>Add to Cart</Button>
+                <Button style={{ margin: "15px" }} onClick={props.addWallet}>Add to Cart</Button>
               </CardBody>
             </Card>
           </Col>
@@ -77,4 +71,20 @@ const Items = (props) => {
   );
 };
 
-export default Items;
+const mapStateToProps = (state) => {
+  return {
+    shoes: state.shoes,
+    wallet: state.wallet,
+    camera: state.camera,
+  };
+};
+
+const mapDispatchToProps = (dispatch) => {
+  return {
+    addShoes: () => dispatch({ type: "ADD_SHOES" }),
+    addWallet: () => dispatch({ type: "ADD_WALLET" }),
+    addCamera: () => dispatch({ type: "ADD_CAMERA" }),
+  };
+};
+
+export default connect(mapStateToProps, mapDispatchToProps)(Items);
