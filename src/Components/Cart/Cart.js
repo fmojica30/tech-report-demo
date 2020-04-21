@@ -4,9 +4,6 @@ import { Container, Row, Col, Table } from "reactstrap";
 
 const Cart = (props) => {
 
-  const calculateTotal = () => {
-    return 
-  }
   return (
     <Fragment>
       <div style={{ textAlign: "center", marginTop: "15px" }}>
@@ -25,29 +22,44 @@ const Cart = (props) => {
                 </tr>
               </thead>
               <tbody>
-                <tr>
-                  <th scope="row">1</th>
-                  <td>Shoes</td>
-                  <td>{props.shoes}</td>
-                  <td>$29.99</td>
-                </tr>
-                <tr>
-                  <th scope="row">2</th>
-                  <td>Camera</td>
-                  <td>{props.camera}</td>
-                  <td>$99.99</td>
-                </tr>
-                <tr>
-                  <th scope="row">3</th>
-                  <td>Wallet</td>
-                  <td>{props.wallet}</td>
-                  <td>$19.99</td>
-                </tr>
+                {props.shoes > 0 ? (
+                  <tr>
+                    <th scope="row">1</th>
+                    <td>Shoes</td>
+                    <td>{props.shoes}</td>
+                    <td>$29.99</td>
+                  </tr>
+                ) : null}
+                {props.camera > 0 ? (
+                  <tr>
+                    <th scope="row">2</th>
+                    <td>Camera</td>
+                    <td>{props.camera}</td>
+                    <td>$99.99</td>
+                  </tr>
+                ) : null}
+                {props.wallet > 0 ? (
+                  <tr>
+                    <th scope="row">3</th>
+                    <td>Wallet</td>
+                    <td>{props.wallet}</td>
+                    <td>$19.99</td>
+                  </tr>
+                ) : null}
                 <tr>
                   <th scope="row">Total</th>
                   <td></td>
                   <td></td>
-                  <td>{"$"+((props.shoes * 29.99) + (props.wallet * 19.99) + (props.camera * 99.99)).toFixed(2).toString()}</td>
+                  <td>
+                    {"$" +
+                      (
+                        props.shoes * 29.99 +
+                        props.wallet * 19.99 +
+                        props.camera * 99.99
+                      )
+                        .toFixed(2)
+                        .toString()}
+                  </td>
                 </tr>
               </tbody>
             </Table>

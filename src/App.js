@@ -9,7 +9,7 @@ import Cart from "./Components/Cart/Cart";
 
 function App() {
   return (
-    <BrowserRouter>
+    <BrowserRouter basename="/tech-report-demo/">
       <div className="App">
         <NavBar />
         <Switch>
