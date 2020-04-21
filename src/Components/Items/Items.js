@@ -22,7 +22,7 @@ const Items = (props) => {
     <div style={{ textAlign: "center", marginTop: "15px" }}>
       <h2>Items</h2>
       <Container>
-        <Row xs="1">
+        <Row xs="1" sm="1" md="3" lg="3" xl="3">
           <Col>
             <Card>
               <CardImg
