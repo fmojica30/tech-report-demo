@@ -18,35 +18,25 @@ const NavBar = (props) => {
   return (
     <div>
       <Navbar color="light" light expand="md">
-        <NavbarBrand>
-          <Link to="/">Store</Link>
-        </NavbarBrand>
+        <NavbarBrand>Store</NavbarBrand>
         <Nav className="mr-auto" navbar>
           <NavItem active={navState.itemsActive}>
-
-            <Link to="/store">
-
-              <NavLink
-                onClick={() => {
-                  setNavState({ itemsActive: true, cartActive: false });
-                }}
-              >
-                Items
-              </NavLink>
-            </Link>
+            <NavLink
+              onClick={() => {
+                setNavState({ itemsActive: true, cartActive: false });
+              }}
+            >
+              Items
+            </NavLink>
           </NavItem>
           <NavItem active={navState.cartActive}>
-          
-            <Link to="/cart">
-
-              <NavLink
-                onClick={() => {
-                  setNavState({ itemsActive: false, cartActive: true });
-                }}
-              >
-                Cart
-              </NavLink>
-            </Link>
+            <NavLink
+              onClick={() => {
+                setNavState({ itemsActive: false, cartActive: true });
+              }}
+            >
+              Cart
+            </NavLink>
           </NavItem>
         </Nav>
         <NavbarText>React Redux and Router Demo</NavbarText>

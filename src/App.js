@@ -12,11 +12,7 @@ function App() {
     <BrowserRouter basename="/tech-report-demo/">
       <div className="App">
         <NavBar />
-        <Switch>
-          <Route path="/store" component={Items}/>
-          <Route path="/cart" component={Cart} />
-          <Route path="/" component={Home}/>
-        </Switch>
+        
       </div>
     </BrowserRouter>
   );

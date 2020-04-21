@@ -26,7 +26,7 @@ const Cart = (props) => {
                   <tr>
                     <th scope="row">1</th>
                     <td>Shoes</td>
-                    <td>{props.shoes}</td>
+                    <td>{}</td>
                     <td>$29.99</td>
                   </tr>
                 ) : null}
@@ -34,7 +34,7 @@ const Cart = (props) => {
                   <tr>
                     <th scope="row">2</th>
                     <td>Camera</td>
-                    <td>{props.camera}</td>
+                    <td>{}</td>
                     <td>$99.99</td>
                   </tr>
                 ) : null}
@@ -42,7 +42,7 @@ const Cart = (props) => {
                   <tr>
                     <th scope="row">3</th>
                     <td>Wallet</td>
-                    <td>{props.wallet}</td>
+                    <td>{}</td>
                     <td>$19.99</td>
                   </tr>
                 ) : null}
@@ -51,14 +51,7 @@ const Cart = (props) => {
                   <td></td>
                   <td></td>
                   <td>
-                    {"$" +
-                      (
-                        props.shoes * 29.99 +
-                        props.wallet * 19.99 +
-                        props.camera * 99.99
-                      )
-                        .toFixed(2)
-                        .toString()}
+                    {"$"}
                   </td>
                 </tr>
               </tbody>
@@ -73,8 +66,6 @@ const Cart = (props) => {
 const mapStateToProps = (state) => {
   return {
     shoes: state.shoes,
-    wallet: state.wallet,
-    camera: state.camera,
   };
 };
 
