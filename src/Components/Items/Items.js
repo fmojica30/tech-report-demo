@@ -35,7 +35,7 @@ const Items = (props) => {
               <CardBody>
                 <CardTitle>Camera</CardTitle>
                 <CardSubtitle>High Quality DSLR</CardSubtitle>
-                <Button style={{ margin: "15px" }} onClick={}>
+                <Button style={{ margin: "15px" }} onClick={null}>
                   Add to cart
                 </Button>
               </CardBody>
@@ -53,7 +53,7 @@ const Items = (props) => {
               <CardBody>
                 <CardTitle>White Shoes</CardTitle>
                 <CardSubtitle>Comfortable Shoes</CardSubtitle>
-                <Button style={{ margin: "15px" }} onClick={}>
+                <Button style={{ margin: "15px" }} onClick={null}>
                   Add to Cart
                 </Button>
               </CardBody>
@@ -71,7 +71,7 @@ const Items = (props) => {
               <CardBody>
                 <CardTitle>Wallet</CardTitle>
                 <CardSubtitle>High quality leather wallet</CardSubtitle>
-                <Button style={{ margin: "15px" }} onClick={}>
+                <Button style={{ margin: "15px" }} onClick={null}>
                   Add to Cart
                 </Button>
               </CardBody>

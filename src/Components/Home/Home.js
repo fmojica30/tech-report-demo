@@ -6,9 +6,9 @@ const Home = (props) => {
   return (
     <div style={{ alignItems: "center", textAlign: "center" }}>
       <h1 style={{ margin: "75px" }}>Welcome to Our Store</h1>
-        <Button style={{margin: "30px"}}>Go To Store</Button>
-        <Button>Go To Cart</Button>
-    <div>
+      <Button style={{ margin: "30px" }}>Go To Store</Button>
+      <Button>Go To Cart</Button>
+    </div>
   );
 };
 

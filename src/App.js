@@ -11,6 +11,7 @@ function App() {
   return (
     <BrowserRouter basename="/tech-report-demo/">
       <div className="App">
+        <NavBar />
       </div>
     </BrowserRouter>
   );
