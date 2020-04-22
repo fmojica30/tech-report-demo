@@ -23,9 +23,7 @@ const NavBar = (props) => {
         </NavbarBrand>
         <Nav className="mr-auto" navbar>
           <NavItem active={navState.itemsActive}>
-
             <Link to="/store">
-
               <NavLink
                 onClick={() => {
                   setNavState({ itemsActive: true, cartActive: false });
@@ -36,9 +34,7 @@ const NavBar = (props) => {
             </Link>
           </NavItem>
           <NavItem active={navState.cartActive}>
-          
             <Link to="/cart">
-
               <NavLink
                 onClick={() => {
                   setNavState({ itemsActive: false, cartActive: true });
