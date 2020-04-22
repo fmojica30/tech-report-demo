@@ -10,7 +10,7 @@ i![Tech Report Demo Gif](./tech.gif)
   - After installing brew run the following command in your command line
     $ brew install yarn 
   ---
-  - If you have a windows machine refer to the following link for instructions on how to install yarn
+  - If you have a windows machine refer to the following link for instructions on how to install [yarn](https://classic.yarnpkg.com/en/docs/install/#windows-stable)
 
 - Fork and clone this repo to your local machine
 - Once cloned enter the directory and run
