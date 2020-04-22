@@ -28,4 +28,6 @@ i![Tech Report Demo Gif](./tech.gif)
     ```
     - This local server reloads automatically when we make changes
 
+- If you need to look at the final code for reference it can be found on the final-build branch
+
 This is all you need to get started on our demo, enjoy!
